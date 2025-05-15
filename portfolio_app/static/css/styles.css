@@ -1,0 +1,16 @@
+body {
+    background-color: #ffffff;
+    font-family: sans-serif;
+}
+
+h1 {
+    color: darkblue;
+}
+
+li {
+    color: #333;
+}
+
+strong {
+    color: darkgreen;
+}
