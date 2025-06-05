@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+      /* Full page background and font */
+      body {
+        background-color: #e6f2ff;  /* light blue */
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      /* Header styling */
+      header {
+        background-color: #003366; /* dark blue */
+        padding: 20px 0;
+        text-align: center;
+        color: white;
+      }
+
+      header h1 {
+        margin: 0;
+        font-weight: normal;
+      }
+
+      /* Navigation bar styling */
+      nav {
+        margin-top: 10px;
+      }
+
+      nav a {
+        color: #ffffff;
+        margin: 0 20px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 18px;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      /* Main content area grows to fill space */
+      main {
+        flex-grow: 1;
+        padding: 40px 20px;
+        display: flex;
+        justify-content: center;
+      }
+
+      /* Footer styling */
+      footer {
+        background-color: #003366;
+        color: #ffffff;
+        text-align: center;
+        padding: 15px 0;
+        font-size: 14px;
+      }
+    </style>
+</head>
+<body>
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/projects">Projects</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>
+    &copy; 2025 My Portfolio
+  </footer>
+</body>
+</html>
